@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+body {
+  background-color: #F0F4F8;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  /* Pastikan import font ini di layout jika mau */
+}
+
+/* Glassmorphism Effect */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 transition-all text-sm;
+
+  /* Gunakan arbitrary value (kurung siku) untuk warna langsung */
+  @apply focus:ring-[#39C5BB]/50;
+}
+
+.btn-primary {
+  /* Ganti bg-miku dengan kode warnanya langsung */
+  @apply bg-[#39C5BB] hover:bg-[#2A9D95] text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition-all active:scale-95;
+
+  /* Shadow juga diganti manual */
+  @apply shadow-[#39C5BB]/30;
+}
